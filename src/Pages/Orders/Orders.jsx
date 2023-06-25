@@ -6,7 +6,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 const Orders = () => {
     const {user,logOut}=useContext(AuthContext)
     const [orders,setOrders]=useState([])
-    const url=`http://localhost:7000/orders?email=${user?.email}`;
+    const url=`https://batch6genius-car-server-69.vercel.app/orders?email=${user?.email}`;
     useEffect(()=>{
         fetch(url,{
             headers:{
@@ -29,7 +29,7 @@ const Orders = () => {
     const handleDelete=(id)=>{
         const proceed = window.confirm('Are you sure, you want to cancel this order');
         if (proceed) {
-            fetch(`http://localhost:7000/orders/${id}`,{
+            fetch(`https://batch6genius-car-server-69.vercel.app/orders/${id}`,{
                 method:'DELETE',
             })
             .then(res=>res.json())
@@ -43,7 +43,7 @@ const Orders = () => {
         }
     }
     const handleStatusUpdate=id=>{
-        const url=`http://localhost:7000/orders/${id}`;
+        const url=`https://batch6genius-car-server-69.vercel.app/orders/${id}`;
         fetch(url,{
          method:'PATCH',
          headers:{

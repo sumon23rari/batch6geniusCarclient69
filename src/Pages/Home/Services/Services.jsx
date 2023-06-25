@@ -4,7 +4,7 @@ import ServicesCar from './ServicesCar';
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:7000/services')
+        fetch('https://batch6genius-car-server-69.vercel.app/services')
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[])

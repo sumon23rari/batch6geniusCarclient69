@@ -21,7 +21,7 @@ const LogIn = () => {
             }
             console.log(currentUser1)
     //    GET JWT TOKEN
-    fetch('http://localhost:7000/jwt',{
+    fetch('https://batch6genius-car-server-69.vercel.app/jwt',{
         method:'POST',
         headers:{
             'content-type':'application/json'

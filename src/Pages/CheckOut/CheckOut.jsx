@@ -20,7 +20,7 @@ const CheckOut = () => {
             email,
             message
         }
-        fetch(`http://localhost:7000/orders`,{
+        fetch(`https://batch6genius-car-server-69.vercel.app/orders`,{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
